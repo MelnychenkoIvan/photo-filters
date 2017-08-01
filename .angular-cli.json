@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "public/scss/_icomoon.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
