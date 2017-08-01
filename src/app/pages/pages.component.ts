@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
         <pages-sidebar></pages-sidebar>
       </div>
       <div class="main-panel">
-        main
+        <pages-header></pages-header>
       </div>
       <router-outlet></router-outlet>
     </div>
