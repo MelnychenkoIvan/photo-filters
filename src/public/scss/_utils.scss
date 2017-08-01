@@ -1,0 +1,30 @@
+$colors: (
+  base: (
+    'text-label-color': #7e8792
+  )
+);
+
+@function sk-color($palette, $tone: 'default', $colors: $colors) {
+
+  $group: null;
+
+  @if type_of($colors) != map { // Check if colors map exists and is valid
+    @error "The passed param $colors is not a map.";
+  }
+
+  @if (map-has_key($colors, $palette)) { // Check if the specified palette exists
+    $group: map-get($colors, $palette);
+  } @else {
+    @error "No pallete by the name of '#{$palette}' in $colors map"
+  }
+
+  @if ( map-has-key($group, $tone) ) { // Check id the specified tone exists
+    @return map-get($group, $tone);
+  } @else {
+    @error "No color by the name of '#{$tone}' in the '#{$palette}' palette"
+  }
+}
+
+@function c($palette, $tone: 'default') {
+  @return sk-color($palette, $tone);
+}
