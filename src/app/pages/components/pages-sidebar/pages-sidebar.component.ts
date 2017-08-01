@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'pages-sidebar',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages-sidebar.component.scss']
 })
 export class PagesSidebarComponent implements OnInit {
+
+  @Input() isOpenSidebar: boolean;
 
   constructor() { }
 

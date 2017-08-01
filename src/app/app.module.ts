@@ -6,6 +6,9 @@ import 'hammerjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
+
+import { reducers } from './app.reducers';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    StoreModule.forRoot(reducers),
     AppRoutingModule
   ],
   providers: [],

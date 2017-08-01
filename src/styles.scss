@@ -4,9 +4,13 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
+// color
+@import "public/scss/utils";
+
 // my styles
 @import "public/scss/reset";
 @import "public/scss/main-layout";
+@import "public/scss/common";
 
 
 // common styles
@@ -14,4 +18,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body {
+  background-color: c('base', 'main-bg');
 }

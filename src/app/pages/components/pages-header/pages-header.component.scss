@@ -2,6 +2,12 @@
 
 header {
   height: 60px;
-  color: c('base', 'text-label-color');
-  background: #191d23;
+  border-bottom: 1.5px solid c('base', 'border-color');
+  background: linear-gradient(to bottom, c('base', 'header-bg-start'), c('base', 'header-bg-end'));
+}
+
+
+.icon-toggle-sidebar {
+  cursor: pointer;
+  padding: 5px;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pages-header',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesHeaderComponent implements OnInit {
 
+  @Input() isOpenSidebar: boolean;
+
+  @Output() toggleSidebar = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggle() {
+    this.toggleSidebar.emit(!this.isOpenSidebar);
   }
 
 }

@@ -1,6 +1,6 @@
 @mixin board-animation() {
-  transition-property: top, bottom, width;
-  transition-duration: .2s, .2s, .35s;
+  transition-property: top, bottom, width, opacity;
+  transition-duration: .2s, .2s, .35s, .2s;
   transition-timing-function: linear, linear, ease;
 }
 
@@ -12,6 +12,7 @@
   &.sidebar-hide {
     .sidebar {
       width: 0;
+      opacity: 0;
     }
 
     .main-panel {
@@ -32,13 +33,14 @@
   z-index: 1;
   width: 260px;
   background: #FFFFFF;
+  overflow: hidden;
 }
 
 .sidebar-wrapper {
   position: relative;
   height: calc(100vh);
   overflow: auto;
-  width: 100%;
+  width: 260px;
   z-index: 4;
   padding-bottom: 30px;
 }
