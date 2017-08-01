@@ -1,6 +1,9 @@
 @import "../../../../public/scss/utils";
 
 header {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
   height: 60px;
   border-bottom: 1.5px solid c('base', 'border-color');
   background: linear-gradient(to bottom, c('base', 'header-bg-start'), c('base', 'header-bg-end'));
