@@ -14,8 +14,9 @@ import { ToggleSidebarAction } from './store/pages.actions';
         <pages-header [isOpenSidebar]="isOpenSidebar" 
                       (toggleSidebar)="toggleSidebar($event)">
         </pages-header>
+
+        <router-outlet></router-outlet>
       </div>
-      <router-outlet></router-outlet>
     </div>
   `,
   styles  : []

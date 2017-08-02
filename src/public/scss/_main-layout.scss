@@ -32,13 +32,14 @@
   left: 0;
   z-index: 1;
   width: 260px;
-  background: #FFFFFF;
   overflow: hidden;
+
+  border-right: 1.5px solid c('base', 'border-color');
 }
 
 .sidebar-wrapper {
   position: relative;
-  height: calc(100vh);
+  height: calc(100vh - 60px);
   overflow: auto;
   width: 260px;
   z-index: 4;

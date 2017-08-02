@@ -1,0 +1,21 @@
+@import "../../../../public/scss/utils";
+
+.sidebar-wrapper {
+  padding: 5px 0 15px 0;
+}
+
+.sidebar-logo {
+  height: 60px;
+}
+
+.sidebar-list-item {
+
+}
+
+.sidebar-list-item-ref {
+  text-decoration: none;
+  padding: 5px 10px;
+  width: 100%;
+  display: inline-block;
+  transition: .2s;
+}

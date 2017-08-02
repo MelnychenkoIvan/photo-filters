@@ -5,7 +5,7 @@ export interface State {
 }
 
 const initialState: State = {
-  isOpenSidebar: false
+  isOpenSidebar: true
 };
 
 export function reducer(state: State = initialState, action: Actions): State {
