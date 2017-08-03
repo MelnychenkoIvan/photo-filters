@@ -1,7 +1,12 @@
 @mixin board-animation() {
-  transition-property: top, bottom, width, opacity;
-  transition-duration: .2s, .2s, .35s, .2s;
+  //transition-property: top, bottom, width, opacity;
+  transition-property: all;
+  transition-duration: .2s;
   transition-timing-function: linear, linear, ease;
+}
+
+.sidebar, .sidebar-wrapper, .main-panel {
+  @include board-animation();
 }
 
 .wrapper {
@@ -24,8 +29,6 @@
 
 //-----------sidebar----------//
 .sidebar {
-  @include board-animation();
-
   position: absolute;
   top: 0;
   bottom: 0;
@@ -35,7 +38,14 @@
   overflow: hidden;
 
   border-right: 1.5px solid c('base', 'border-color');
+  background: c('base', 'sidebar-bg');
+
+  box-shadow: 0 10px 30px -12px
+  rgba(0, 0, 0, 0.42), 0 4px 25px 0px
+  rgba(0, 0, 0, 0.12), 0 8px 10px -5px
+  rgba(0, 0, 0, 0.2);
 }
+
 
 .sidebar-wrapper {
   position: relative;
@@ -50,8 +60,6 @@
 
 //----------main panel---------//
 .main-panel {
-  @include board-animation();
-
   max-height: 100%;
   height: 100%;
   position: relative;
@@ -63,4 +71,7 @@
   transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 
+.main-content {
+  padding: 30px 10px;
+}
 //---------main panel end--------//

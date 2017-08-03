@@ -1,16 +1,20 @@
 $colors: (
   base: (
-    'header-bg-start': #3b3e42,
-    'header-bg-end': #090a0a,
-
     'border-color': #35373a,
-
     'link-color': #15b0ed,
-    'text-label-color': #7e8792,
+    'text-label-color': #9eabb6,
 
-    'main-bg': #1c1e22,
+    'main-bg': #EEEEEE,
+    'main-text-color': rgba(0,0,0, 0.9),
 
-    'icon-color': #fff
+    'header-bg': #d7e2eb,
+    'header-main-color': #555555,
+
+    'sidebar-bg': #191919,
+    'sidebar-text-color': #fff,
+    'sidebar-text-active-color': #3C4858,
+    'sidebar-bg-active-color': #fff,
+    'sidebar-bg-hover-color': rgba(200, 200, 200, 0.2),
   )
 );
 

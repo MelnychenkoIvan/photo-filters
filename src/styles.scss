@@ -4,11 +4,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
-// color
-@import "public/scss/utils";
-
 // my styles
 @import "public/scss/reset";
+
+// color
+@import "public/scss/utils";
 @import "public/scss/main-layout";
 @import "public/scss/common";
 
@@ -19,10 +19,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
-  font-size: inherit;
   line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 body {
   background-color: c('base', 'main-bg');
+  color: c('base', 'main-text-color');
 }

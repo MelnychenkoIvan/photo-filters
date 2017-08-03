@@ -8,14 +8,31 @@
   height: 60px;
 }
 
-.sidebar-list-item {
-
+.sidebar-list {
+  .sidebar-list-item:not(:first-child) {
+    .sidebar-list-item-ref {
+      margin-top: 10px;
+    }
+  }
 }
+
 
 .sidebar-list-item-ref {
   text-decoration: none;
-  padding: 5px 10px;
-  width: 100%;
-  display: inline-block;
+  padding: 10px;
+  display: block;
   transition: .2s;
+  font-size: 14px;
+  color: c('base', 'sidebar-text-color');
+  margin: 0 15px;
+  border-radius: 3px;
+
+  &.is-active {
+    color: c('base', 'sidebar-text-active-color');
+    background: c('base', 'sidebar-bg-active-color');
+  }
+
+  &:hover:not(.is-active) {
+    background: c('base', 'sidebar-bg-hover-color');
+  }
 }

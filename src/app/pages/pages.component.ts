@@ -15,7 +15,9 @@ import { ToggleSidebarAction } from './store/pages.actions';
                       (toggleSidebar)="toggleSidebar($event)">
         </pages-header>
 
-        <router-outlet></router-outlet>
+        <div class="main-content">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   `,
