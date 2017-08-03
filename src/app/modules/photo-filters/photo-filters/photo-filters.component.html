@@ -1,3 +1,18 @@
-<p>
-  photo-filters works!
-</p>
+<main class="gallery-wrapper">
+  <section class="gallery">
+    <gallery-image [filters]="filters"></gallery-image>
+  </section>
+  <aside class="filters card">
+    <div class="filters-wrapper">
+      <h3>Filters</h3>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Some filter</label>
+        </div>
+        <md-slider [min]="0" [max]="200" (change)="onChange($event)"></md-slider>
+      </div>
+    </div>
+
+  </aside>
+</main>

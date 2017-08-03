@@ -1,0 +1,24 @@
+@import "../../../../public/scss/utils";
+
+.gallery-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.gallery {
+  flex: 1 1 225%;
+}
+
+.filters {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.filter-item {
+  .mat-slider {
+    width: 100%;
+  }
+}

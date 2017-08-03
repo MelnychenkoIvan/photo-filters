@@ -1,5 +1,6 @@
 <header>
   <i class="icon-toggle-sidebar icon-main icomoon-menu"
+     [ngClass]="{'is-open': isOpenSidebar}"
      (click)="toggle()"
   ></i>
 </header>

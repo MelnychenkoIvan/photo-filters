@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoFiltersComponent implements OnInit {
 
+  public filters = {
+    blur: '10px'
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onChange(value) {
+
+  }
 }

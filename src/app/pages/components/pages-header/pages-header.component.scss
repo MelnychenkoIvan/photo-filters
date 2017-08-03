@@ -13,4 +13,9 @@ header {
   padding: 5px;
   color: c('base', 'header-main-color');
   font-size: 20px;
+  transition: .2s;
+
+  &.is-open {
+    transform: rotate(-90deg);
+  }
 }

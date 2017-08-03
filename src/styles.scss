@@ -8,6 +8,7 @@
 @import "public/scss/reset";
 
 // color
+@import "public/scss/cutom_theme";
 @import "public/scss/utils";
 @import "public/scss/main-layout";
 @import "public/scss/common";
@@ -28,4 +29,9 @@
 body {
   background-color: c('base', 'main-bg');
   color: c('base', 'main-text-color');
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
 }

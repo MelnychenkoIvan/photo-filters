@@ -5,7 +5,7 @@
   transition-timing-function: linear, linear, ease;
 }
 
-.sidebar, .sidebar-wrapper, .main-panel {
+.sidebar, .sidebar-wrapper, .main-panel, .main-content {
   @include board-animation();
 }
 
@@ -73,5 +73,6 @@
 
 .main-content {
   padding: 30px 10px;
+  height: calc(100vh - 60px);
 }
 //---------main panel end--------//
