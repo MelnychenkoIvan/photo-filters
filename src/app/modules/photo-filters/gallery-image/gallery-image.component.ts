@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GalleryImageComponent implements OnInit {
 
-  @Input() filters = {};
+  @Input() filter;
 
   constructor() { }
 
