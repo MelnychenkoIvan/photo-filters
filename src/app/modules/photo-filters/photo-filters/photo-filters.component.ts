@@ -2,7 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 enum FilterName {
   BLUR,
-  BRIGHTNESS
+  BRIGHTNESS,
+  CONTRAST,
+  GRAYSCALE,
+  INVERT,
+  HUE_ROTATE,
+  OPACITY,
+  SATURATE,
+  SEPIA
 }
 
 @Component({
@@ -15,7 +22,14 @@ export class PhotoFiltersComponent implements OnInit {
   public filterName = FilterName;
   public filters = {
     blur: '',
-    brightness: '100%'
+    brightness: '100%',
+    contrast: '100%',
+    grayscale: '0%',
+    invert: '0%',
+    'hue-rotate': '0deg',
+    opacity: '100%',
+    saturate: '1',
+    sepia: '0%'
   };
   public filter = '';
 
@@ -33,6 +47,27 @@ export class PhotoFiltersComponent implements OnInit {
       case FilterName.BRIGHTNESS:
         this.filters.brightness = event.value + '%';
         return this.filter = this.updateFilter();
+      case FilterName.CONTRAST:
+        this.filters.contrast = event.value + '%';
+        return this.filter = this.updateFilter();
+      case FilterName.GRAYSCALE:
+        this.filters.grayscale = event.value + '%';
+        return this.filter = this.updateFilter();
+      case FilterName.INVERT:
+        this.filters.invert = event.value + '%';
+        return this.filter = this.updateFilter();
+      case FilterName.HUE_ROTATE:
+        this.filters['hue-rotate'] = event.value + 'deg';
+        return this.filter = this.updateFilter();
+      case FilterName.OPACITY:
+        this.filters.opacity = event.value + '%';
+        return this.filter = this.updateFilter();
+      case FilterName.SATURATE:
+        this.filters.saturate = event.value + '';
+        return this.filter = this.updateFilter();
+      case FilterName.SEPIA:
+        this.filters.sepia = event.value + '%';
+        return this.filter = this.updateFilter();
       default:
         return;
     }
@@ -41,9 +76,9 @@ export class PhotoFiltersComponent implements OnInit {
   updateFilter() {
     let filter = '';
     for (const i in this.filters) {
-      console.log(this.filters[i]);
-      console.log(i);
-      filter += i + '(' + this.filters[i] + ') ';
+      if (this.filters.hasOwnProperty(i)) {
+        filter += i + '(' + this.filters[i] + ') ';
+      }
     }
     console.log(filter);
     return filter;

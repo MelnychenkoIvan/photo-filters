@@ -19,6 +19,55 @@
         </div>
         <md-slider [min]="0" [max]="200" [value]="filters.brightness" (change)="onChange($event, filterName.BRIGHTNESS)"></md-slider>
       </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Contrast</label>
+        </div>
+        <md-slider [min]="0" [max]="200" [value]="filters.contrast" (change)="onChange($event, filterName.CONTRAST)"></md-slider>
+      </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Grayscale</label>
+        </div>
+        <md-slider [min]="0" [max]="200" [value]="filters.grayscale" (change)="onChange($event, filterName.GRAYSCALE)"></md-slider>
+    </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Invert</label>
+        </div>
+        <md-slider [min]="0" [max]="100" [value]="filters.invert" (change)="onChange($event, filterName.INVERT)"></md-slider>
+      </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Hue-rotate</label>
+        </div>
+        <md-slider [min]="0" [max]="200" [value]="filters['hue-rotate']" (change)="onChange($event, filterName.HUE_ROTATE)"></md-slider>
+      </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Opacity</label>
+        </div>
+        <md-slider [min]="0" [max]="100" [value]="filters.opacity" (change)="onChange($event, filterName.OPACITY)"></md-slider>
+      </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Saturate</label>
+        </div>
+        <md-slider [min]="0" [max]="100" [value]="filters.saturate" (change)="onChange($event, filterName.SATURATE)"></md-slider>
+      </div>
+
+      <div class="filter-item">
+        <div>
+          <label class="label-text">Sepia</label>
+        </div>
+        <md-slider [min]="0" [max]="200" [value]="filters.sepia" (change)="onChange($event, filterName.SEPIA)"></md-slider>
+      </div>
     </div>
 
   </aside>
