@@ -1,16 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-enum FilterName {
-  BLUR,
-  BRIGHTNESS,
-  CONTRAST,
-  GRAYSCALE,
-  INVERT,
-  HUE_ROTATE,
-  OPACITY,
-  SATURATE,
-  SEPIA
-}
+import {IFilter, filters} from '../Filter';
 
 @Component({
   selector: 'photo-filters',
@@ -19,68 +8,26 @@ enum FilterName {
 })
 export class PhotoFiltersComponent implements OnInit {
 
-  public filterName = FilterName;
-  public filters = {
-    blur: '',
-    brightness: '100%',
-    contrast: '100%',
-    grayscale: '0%',
-    invert: '0%',
-    'hue-rotate': '0deg',
-    opacity: '100%',
-    saturate: '1',
-    sepia: '0%'
-  };
   public filter = '';
+  public filters: IFilter[] = [];
 
   constructor() { }
 
   ngOnInit() {
+    Object.assign(this.filters, filters);
     this.updateFilter();
   }
 
-  onChange(event, name: FilterName) {
-    switch (name) {
-      case FilterName.BLUR:
-        this.filters.blur = event.value + 'px';
-        return this.filter = this.updateFilter();
-      case FilterName.BRIGHTNESS:
-        this.filters.brightness = event.value + '%';
-        return this.filter = this.updateFilter();
-      case FilterName.CONTRAST:
-        this.filters.contrast = event.value + '%';
-        return this.filter = this.updateFilter();
-      case FilterName.GRAYSCALE:
-        this.filters.grayscale = event.value + '%';
-        return this.filter = this.updateFilter();
-      case FilterName.INVERT:
-        this.filters.invert = event.value + '%';
-        return this.filter = this.updateFilter();
-      case FilterName.HUE_ROTATE:
-        this.filters['hue-rotate'] = event.value + 'deg';
-        return this.filter = this.updateFilter();
-      case FilterName.OPACITY:
-        this.filters.opacity = event.value + '%';
-        return this.filter = this.updateFilter();
-      case FilterName.SATURATE:
-        this.filters.saturate = event.value + '';
-        return this.filter = this.updateFilter();
-      case FilterName.SEPIA:
-        this.filters.sepia = event.value + '%';
-        return this.filter = this.updateFilter();
-      default:
-        return;
-    }
+  onChange(event, filter: IFilter) {
+    filter.value = event.value;
+    this.updateFilter();
   }
 
   updateFilter() {
-    let filter = '';
-    for (const i in this.filters) {
-      if (this.filters.hasOwnProperty(i)) {
-        filter += i + '(' + this.filters[i] + ') ';
-      }
-    }
-    console.log(filter);
-    return filter;
+    this.filter = '';
+
+    this.filters.forEach((filter: IFilter) => {
+      this.filter += `${filter.name}(${filter.value}${filter.unit})`;
+    });
   }
 }
