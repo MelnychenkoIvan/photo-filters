@@ -4,7 +4,7 @@
   </section>
   <aside class="filters card">
     <div class="filters-wrapper">
-      <h3>Filters</h3>
+      <h3>Filters <span (click)="clear()" class="filter-clear">Clear</span></h3>
 
       <div *ngFor="let filter of filters;let i = index;" class="filter-item">
         <div>

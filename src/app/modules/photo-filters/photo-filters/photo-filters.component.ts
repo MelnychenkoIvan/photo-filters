@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IFilter, filters} from '../Filter';
+import {Utils} from '../../../core/utils/utils';
 
 @Component({
   selector: 'photo-filters',
@@ -14,7 +15,7 @@ export class PhotoFiltersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    Object.assign(this.filters, filters);
+    this.filters = Utils.clone(filters);
     this.updateFilter();
   }
 
@@ -30,4 +31,12 @@ export class PhotoFiltersComponent implements OnInit {
       this.filter += `${filter.name}(${filter.value}${filter.unit})`;
     });
   }
+
+  clear() {
+    this.filters = Utils.clone(filters);
+    this.updateFilter();
+  }
 }
+
+
+
