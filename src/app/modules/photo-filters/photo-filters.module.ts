@@ -5,7 +5,9 @@ import { MdSliderModule } from '@angular/material';
 
 import { PhotoFiltersRoutingModule } from './photo-filters-routing.module';
 import { PhotoFiltersComponent } from './photo-filters/photo-filters.component';
-import { GalleryImageComponent } from './gallery-image/gallery-image.component';
+import { ViewImageComponent } from './view-image/view-image.component';
+import { FilterListComponent } from './filter-list/filter-list.component';
+import { GalleryImagesComponent } from './gallery-images/gallery-images.component';
 
 const materialModule = [
   MdSliderModule
@@ -17,7 +19,7 @@ const materialModule = [
     PhotoFiltersRoutingModule,
     ...materialModule
   ],
-  declarations: [PhotoFiltersComponent, GalleryImageComponent]
+  declarations: [PhotoFiltersComponent, ViewImageComponent, FilterListComponent, GalleryImagesComponent]
 })
 export class PhotoFiltersModule {
 }

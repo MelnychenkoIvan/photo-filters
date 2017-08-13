@@ -1,11 +1,15 @@
+@import "../../../../public/scss/utils";
+
 .gallery-image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-right: 10px;
 
   .gallery-image-item {
-    width: 500px;
+    //width: 500px;
+    max-width: 1000px;
   }
 
   .gallery-image {

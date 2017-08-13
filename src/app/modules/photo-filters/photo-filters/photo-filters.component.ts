@@ -11,6 +11,7 @@ export class PhotoFiltersComponent implements OnInit {
 
   public filter = '';
   public filters: IFilter[] = [];
+  public images: string[] = ['./assets/images/1.jpg'];
 
   constructor() { }
 
@@ -19,8 +20,8 @@ export class PhotoFiltersComponent implements OnInit {
     this.updateFilter();
   }
 
-  onChange(event, filter: IFilter) {
-    filter.value = event.value;
+  onChange({value, filter}) {
+    filter.value = value;
     this.updateFilter();
   }
 
