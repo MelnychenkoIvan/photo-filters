@@ -1,0 +1,7 @@
+<div class="filter-item">
+  <div>
+    <label class="label-text">{{filter.name}}</label>
+    <span class="filter-value">{{filter.value}} {{filter.unit}}</span>
+  </div>
+  <md-slider [min]="filter.min" [max]="filter.max" [value]="filter.value" (change)="onChange($event, filter)"></md-slider>
+</div>

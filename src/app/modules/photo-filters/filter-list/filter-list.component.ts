@@ -21,8 +21,4 @@ export class FilterListComponent implements OnInit {
   clearFilter() {
     this.clear.next();
   }
-
-  onChange({value}, filter: IFilter) {
-    this.change.next({value: value, filter: filter});
-  }
 }

@@ -1,0 +1,17 @@
+.filter-item {
+
+  .filter-value {
+    float: right;
+    font-size: 12px;
+    border: 1px solid c('base', 'border-color');
+    padding: 1px 5px 0 5px;
+    border-radius: 2px;
+  }
+  .mat-slider {
+    width: 100%;
+  }
+
+  .label-text {
+    text-transform: capitalize;
+  }
+}

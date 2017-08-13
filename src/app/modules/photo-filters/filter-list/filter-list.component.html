@@ -1,12 +1,6 @@
 <div class="filters-wrapper">
   <h3>Filters <span (click)="clearFilter()" class="filter-clear">Clear</span></h3>
 
-  <div *ngFor="let filter of filters;let i = index;" class="filter-item">
-    <div>
-      <label class="label-text">{{filter.name}}</label>
-      <span class="filter-value">{{filter.value}} {{filter.unit}}</span>
-    </div>
-    <md-slider [min]="filter.min" [max]="filter.max" [value]="filter.value" (change)="onChange($event, filter)"></md-slider>
-  </div>
+  <filter-item *ngFor="let filter of filters" [filter]="filter" (change)="change.next($event)"></filter-item>
 
 </div>
